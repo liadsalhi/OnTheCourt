@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">OnTheCourt</string>
+    <!-- google_maps_key and serpapi_key live in values/secrets.xml (gitignored) -->
+
+
+    <!-- Auth -->
+    <string name="login_title">OnTheCourt</string>
+    <string name="login_subtitle">מצאו מגרשים. מצאו שחקנים. שחקו.</string>
+    <string name="label_email">אימייל</string>
+    <string name="label_password">סיסמה</string>
+    <string name="btn_login">התחברות</string>
+    <string name="link_sign_up">אין לך חשבון? הירשם</string>
+    <string name="create_account">יצירת חשבון</string>
+    <string name="label_first_name">שם פרטי</string>
+    <string name="label_last_name">שם משפחה</string>
+    <string name="label_city">עיר</string>
+    <string name="label_age">גיל</string>
+    <string name="btn_sign_up">הרשמה</string>
+    <string name="link_log_in">כבר יש לך חשבון? התחברות</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">דף הבית</string>
+    <string name="nav_my_games">המשחקים שלי</string>
+    <string name="nav_friends">חברים</string>
+    <string name="menu_logout">התנתקות</string>
+
+    <!-- Home -->
+    <string name="what_to_play">במה תרצו לשחק היום?</string>
+    <string name="sport_soccer">כדורגל</string>
+    <string name="sport_basketball">כדורסל</string>
+    <string name="sport_tennis">טניס</string>
+
+    <!-- Court Map -->
+    <string name="hint_city">הזינו עיר…</string>
+    <string name="btn_search">חיפוש</string>
+    <string name="view_games">צפייה במשחקים / יצירת משחק</string>
+
+    <!-- Court Detail -->
+    <string name="btn_create_game">צור משחק חדש</string>
+    <string name="open_games">משחקים פתוחים</string>
+    <string name="no_games">אין משחקים פתוחים במגרש זה.</string>
+
+    <!-- Create Game -->
+    <string name="create_game_title">יצירת משחק</string>
+    <string name="label_day">יום</string>
+    <string name="label_month">חודש</string>
+    <string name="label_year">שנה</string>
+    <string name="label_time">שעה (HH:mm)</string>
+    <string name="label_max_players">מספר שחקנים</string>
+    <string name="label_num_teams">מספר קבוצות</string>
+    <string name="label_duration">משך זמן (בדקות)</string>
+    <string name="label_description">תיאור (אופציונלי)</string>
+    <string name="btn_invite_friends">הזמנת חברים</string>
+    <string name="btn_create">יצירת משחק</string>
+
+    <!-- Game Detail -->
+    <string name="players_count">%1$d / %2$d שחקנים</string>
+    <string name="btn_join_game">הצטרפות למשחק</string>
+    <string name="btn_close_game">סגירת משחק</string>
+    <string name="btn_add_friend">הוספת חבר</string>
+    <string name="game_closed">המשחק הזה מלא כעת.</string>
+    <string name="friend_request_sent">בקשת חברות נשלחה!</string>
+    <string name="joined_game">הצטרפת למשחק!</string>
+
+    <!-- My Games -->
+    <string name="active_games">משחקים פעילים</string>
+    <string name="past_games">משחקים קודמים</string>
+    <string name="no_active_games">אין משחקים פעילים.</string>
+    <string name="no_past_games">אין משחקים קודמים.</string>
+
+    <!-- Friends -->
+    <string name="friend_requests">בקשות חברות</string>
+    <string name="my_friends">החברים שלי</string>
+    <string name="btn_accept">אישור</string>
+    <string name="btn_decline">דחייה</string>
+    <string name="btn_invite_to_game">הזמנה למשחק</string>
+    <string name="no_friend_requests">אין בקשות ממתינות.</string>
+    <string name="no_friends">עדיין אין חברים. מצאו שחקנים במשחקים!</string>
+    <string name="title_add_friends">הוספת חברים</string>
+    <string name="hint_search_friends">חיפוש לפי שם…</string>
+    <string name="no_search_results">לא נמצאו משתמשים בשם זה.</string>
+    <string name="result_age_city_format">%1$d · %2$s</string>
+
+    <!-- Chat -->
+    <string name="title_chat">צ\'אט</string>
+    <string name="hint_message">הקלידו הודעה…</string>
+    <string name="btn_send">שליחה</string>
+    <string name="msg_send_failed">שליחת ההודעה נכשלה: %1$s</string>
+
+    <!-- Common -->
+    <string name="btn_done">סיום</string>
+    <string name="btn_cancel">ביטול</string>
+    <string name="status_sent">נשלח</string>
+    <string name="title_court">מגרש</string>
+    <string name="title_game">משחק</string>
+
+    <!-- Home welcome -->
+    <string name="welcome_default">ברוכים הבאים!</string>
+    <string name="welcome_user">ברוכים הבאים, %1$s!</string>
+
+    <!-- Auth errors -->
+    <string name="error_email_required">יש להזין אימייל</string>
+    <string name="error_password_required">יש להזין סיסמה</string>
+    <string name="error_login_failed">ההתחברות נכשלה</string>
+    <string name="error_required">שדה חובה</string>
+    <string name="error_min_password">לפחות 6 תווים</string>
+    <string name="error_registration_failed">ההרשמה נכשלה</string>
+    <string name="error_save_profile_failed">שמירת הפרופיל נכשלה: %1$s</string>
+    <string name="error_invalid_email">כתובת אימייל לא תקינה</string>
+    <string name="error_email_in_use">כתובת האימייל הזו כבר רשומה במערכת</string>
+
+    <!-- Court Map -->
+    <string name="error_enter_city">יש להזין שם עיר</string>
+    <string name="msg_city_not_found">העיר לא נמצאה: %1$s</string>
+    <string name="msg_no_courts_found">לא נמצאו מגרשי %1$s בקרבת מקום. נסו עיר אחרת.</string>
+    <string name="msg_search_unavailable">לא ניתן לחפש מגרשים כרגע. מוצג מיקום כללי בלבד.</string>
+    <string name="no_courts_found_list">לא נמצאו מגרשים באזור זה.</string>
+    <string name="showing_sport_courts">מוצגים מגרשי %1$s</string>
+    <string name="fallback_court_name">מגרש %1$s ב%2$s</string>
+
+    <!-- Game Detail rows -->
+    <string name="label_date_row">תאריך</string>
+    <string name="date_time_format">%1$s · %2$s</string>
+    <string name="label_time_row">שעה</string>
+    <string name="label_teams_row">קבוצות</string>
+    <string name="label_duration_row">משך זמן</string>
+    <string name="label_players_row">שחקנים</string>
+    <string name="teams_count">%1$d קבוצות</string>
+    <string name="duration_minutes">%1$d דקות</string>
+    <string name="msg_game_closed">המשחק נסגר.</string>
+    <string name="msg_request_already_sent">הבקשה כבר נשלחה.</string>
+    <string name="msg_already_friends">אתם כבר חברים.</string>
+    <string name="msg_join_failed">ההצטרפות נכשלה: %1$s</string>
+    <string name="msg_close_failed">הסגירה נכשלה: %1$s</string>
+    <string name="label_registration_closed">סגור להרשמה</string>
+    <string name="msg_registration_closed">ההרשמה למשחק זה סגורה</string>
+    <string name="msg_game_already_started">המשחק כבר התחיל</string>
+
+    <!-- Create Game -->
+    <string name="court_info_format">%1$s · %2$s</string>
+    <string name="msg_no_friends_invite">אין חברים להזמין כרגע.</string>
+    <string name="error_invalid_time">שעה לא תקינה (פורמט HH:mm, לדוגמה 18:30)</string>
+    <string name="error_invalid_date">תאריך לא תקין</string>
+    <string name="invite_friends_selected">הזמנת חברים (%1$d נבחרו)</string>
+    <string name="msg_game_created_invites">המשחק נוצר! נשלחו הזמנות ל-%1$d חברים.</string>
+    <string name="msg_create_game_failed">יצירת המשחק נכשלה: %1$s</string>
+
+    <!-- Friends -->
+    <string name="msg_friend_added">אתם חברים עכשיו עם %1$s!</string>
+    <string name="msg_friend_error">שגיאה: %1$s</string>
+    <string name="msg_no_active_games_invite">אין משחקים פעילים להזמנת %1$s.</string>
+    <string name="title_invite_to_game">הזמנת %1$s למשחק</string>
+    <string name="msg_friend_added_to_game">%1$s נוסף/ה למשחק!</string>
+    <string name="msg_invite_failed">ההזמנה נכשלה: %1$s</string>
+    <string name="game_label_format">%1$s · %2$s (%3$s)</string>
+</resources>

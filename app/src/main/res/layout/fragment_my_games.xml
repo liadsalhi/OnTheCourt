@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Whole screen scrolls as one; both lists are wrap_content with nested scrolling
+         disabled so a long "active games" list can never push "past games" off-screen. -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Active Games Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/active_games"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface"
+                android:padding="@dimen/spacing_md"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_active_games"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/spacing_md"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"/>
+
+            <TextView
+                android:id="@+id/tv_no_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_active_games"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:padding="@dimen/spacing_lg"
+                android:visibility="gone"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/divider" android:layout_marginVertical="@dimen/spacing_sm"/>
+
+            <!-- Past Games Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/past_games"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_secondary"
+                android:padding="@dimen/spacing_md"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_past_games"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/spacing_md"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"/>
+
+            <TextView
+                android:id="@+id/tv_no_past"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_past_games"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:padding="@dimen/spacing_lg"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</FrameLayout>

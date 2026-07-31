@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sportSelectionFragment"
+        android:icon="@drawable/ic_home_24dp"
+        android:title="@string/nav_home"/>
+    <item
+        android:id="@+id/myGamesFragment"
+        android:icon="@drawable/ic_sports_24dp"
+        android:title="@string/nav_my_games"/>
+    <item
+        android:id="@+id/friendsFragment"
+        android:icon="@drawable/ic_people_24dp"
+        android:title="@string/nav_friends"/>
+</menu>

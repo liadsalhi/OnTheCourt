@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/action_button_reserved_space">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_md">
+
+            <!-- Game Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                android:layout_marginBottom="@dimen/spacing_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_lg">
+
+                    <TextView
+                        android:id="@+id/tv_sport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/secondary"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"/>
+
+                    <TextView
+                        android:id="@+id/tv_court_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginTop="@dimen/spacing_xs"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/divider" android:layout_marginVertical="@dimen/spacing_md"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="@color/text_secondary"
+                            android:text="@string/label_date_row"/>
+                        <TextView android:id="@+id/tv_date" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+                            android:textStyle="bold" android:layoutDirection="ltr"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="@dimen/spacing_sm">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="@color/text_secondary"
+                            android:text="@string/label_time_row"/>
+                        <TextView android:id="@+id/tv_time" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="@dimen/spacing_sm">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="@color/text_secondary"
+                            android:text="@string/label_teams_row"/>
+                        <TextView android:id="@+id/tv_teams" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="@dimen/spacing_sm">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="@color/text_secondary"
+                            android:text="@string/label_duration_row"/>
+                        <TextView android:id="@+id/tv_duration" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="@dimen/spacing_sm">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="@color/text_secondary"
+                            android:text="@string/label_players_row"/>
+                        <TextView android:id="@+id/tv_player_count" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView android:id="@+id/tv_description" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textColor="@color/text_secondary"
+                        android:layout_marginTop="@dimen/spacing_md" android:visibility="gone"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Players section -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/label_players_row" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="@color/on_background" android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_players"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom action button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/spacing_md"
+        android:text="@string/btn_join_game"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

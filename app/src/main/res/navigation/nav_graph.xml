@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sportSelectionFragment">
+
+    <!-- Home / Sport Selection -->
+    <fragment
+        android:id="@+id/sportSelectionFragment"
+        android:name="com.onthecourt.app.home.SportSelectionFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_sport_selection">
+        <action
+            android:id="@+id/action_sportSelection_to_courtMap"
+            app:destination="@id/courtMapFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- Court Map -->
+    <fragment
+        android:id="@+id/courtMapFragment"
+        android:name="com.onthecourt.app.map.CourtMapFragment"
+        android:label="Find Courts"
+        tools:layout="@layout/fragment_court_map">
+        <argument
+            android:name="sport"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_courtMap_to_courtDetail"
+            app:destination="@id/courtDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- Court Detail -->
+    <fragment
+        android:id="@+id/courtDetailFragment"
+        android:name="com.onthecourt.app.map.CourtDetailFragment"
+        android:label="Court"
+        tools:layout="@layout/fragment_court_detail">
+        <argument android:name="courtName" app:argType="string"/>
+        <argument android:name="sport" app:argType="string"/>
+        <argument android:name="city" app:argType="string"/>
+        <action
+            android:id="@+id/action_courtDetail_to_createGame"
+            app:destination="@id/createGameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_courtDetail_to_gameDetail"
+            app:destination="@id/gameDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- Create Game -->
+    <fragment
+        android:id="@+id/createGameFragment"
+        android:name="com.onthecourt.app.game.CreateGameFragment"
+        android:label="Create Game"
+        tools:layout="@layout/fragment_create_game">
+        <argument android:name="courtName" app:argType="string"/>
+        <argument android:name="sport" app:argType="string"/>
+        <argument android:name="city" app:argType="string"/>
+        <action
+            android:id="@+id/action_createGame_to_gameDetail"
+            app:destination="@id/gameDetailFragment"
+            app:popUpTo="@id/courtDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <!-- Game Detail -->
+    <fragment
+        android:id="@+id/gameDetailFragment"
+        android:name="com.onthecourt.app.game.GameDetailFragment"
+        android:label="Game"
+        tools:layout="@layout/fragment_game_detail">
+        <argument android:name="gameId" app:argType="string"/>
+        <argument
+            android:name="isCreator"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+    </fragment>
+
+    <!-- My Games (bottom nav top-level) -->
+    <fragment
+        android:id="@+id/myGamesFragment"
+        android:name="com.onthecourt.app.mygames.MyGamesFragment"
+        android:label="My Games"
+        tools:layout="@layout/fragment_my_games">
+        <action
+            android:id="@+id/action_myGames_to_gameDetail"
+            app:destination="@id/gameDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- Friends (bottom nav top-level) -->
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.onthecourt.app.friends.FriendsFragment"
+        android:label="Friends"
+        tools:layout="@layout/fragment_friends">
+        <action
+            android:id="@+id/action_friends_to_chat"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- Chat -->
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.onthecourt.app.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+        <argument android:name="friendUid" app:argType="string"/>
+        <argument android:name="friendName" app:argType="string"/>
+    </fragment>
+
+</navigation>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg">
+
+        <!-- Welcome text -->
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_default"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_background"
+            android:layout_marginTop="@dimen/spacing_md"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/what_to_play"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginBottom="@dimen/spacing_xl"/>
+
+        <!-- Soccer Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_soccer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sport_card_height"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_sport_card_soccer"
+                android:padding="@dimen/spacing_lg">
+
+                <TextView
+                    android:layout_width="@dimen/sport_icon_size"
+                    android:layout_height="@dimen/sport_icon_size"
+                    android:text="⚽"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_icon_badge"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sport_soccer"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_primary"
+                    android:layout_marginStart="@dimen/spacing_md"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_chevron_forward"
+                    app:tint="@color/on_primary"
+                    android:contentDescription="@null"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Basketball Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_basketball"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sport_card_height"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_sport_card_basketball"
+                android:padding="@dimen/spacing_lg">
+
+                <TextView
+                    android:layout_width="@dimen/sport_icon_size"
+                    android:layout_height="@dimen/sport_icon_size"
+                    android:text="🏀"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_icon_badge"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sport_basketball"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_primary"
+                    android:layout_marginStart="@dimen/spacing_md"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_chevron_forward"
+                    app:tint="@color/on_primary"
+                    android:contentDescription="@null"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tennis Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_tennis"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sport_card_height"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_sport_card_tennis"
+                android:padding="@dimen/spacing_lg">
+
+                <TextView
+                    android:layout_width="@dimen/sport_icon_size"
+                    android:layout_height="@dimen/sport_icon_size"
+                    android:text="🎾"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_icon_badge"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sport_tennis"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_primary"
+                    android:layout_marginStart="@dimen/spacing_md"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_chevron_forward"
+                    app:tint="@color/on_primary"
+                    android:contentDescription="@null"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
