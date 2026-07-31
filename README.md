@@ -4,7 +4,7 @@ OnTheCourt is a native Android app that helps people find sports courts near the
 
 ## What it does
 
-- **Pick a sport** - soccer, basketball, or tennis.
+- **Pick a sport** - football, basketball, or tennis.
 - **Find courts** - search a city and see nearby courts on a live Google Map, with a matching list view.
 - **Create a game** - set date, time, player limit, number of teams, and duration for a court.
 - **Join open games** - see games other users created at the same court and join them.
